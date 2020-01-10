@@ -36,7 +36,7 @@ variable "subnet_names" {
 
 variable "nsg_ids" {
   description = "A map of subnet name to Network Security Group IDs"
-  type        = "map"
+  type        = map(string)
 
   default = {
     subnet1 = "nsgid1"
@@ -46,7 +46,7 @@ variable "nsg_ids" {
 
 variable "tags" {
   description = "The tags to associate with your network and subnets."
-  type        = "map"
+  type        = map(string)
 
   default = {
     tag1 = ""
